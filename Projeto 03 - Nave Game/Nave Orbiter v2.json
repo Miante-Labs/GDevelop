@@ -18,7 +18,7 @@
     "scaleMode": "nearest",
     "sizeOnStartupMode": "",
     "templateSlug": "",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "Nave Orbiter v2",
     "description": "",
     "author": "",
@@ -4044,7 +4044,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5634519864159119,
+        "zoomFactor": 0.4773551654051565,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -4078,15 +4078,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 64,
+          "depth": 2,
+          "height": 128,
           "keepRatio": true,
           "layer": "",
           "name": "NaveJogador",
           "persistentUuid": "13e395e3-e335-4525-9ed9-20a0e53c3353",
-          "width": 64,
-          "x": 352,
-          "y": 1152,
+          "width": 128,
+          "x": 384,
+          "y": 928,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4169,8 +4169,8 @@
           "layer": "Cenario",
           "name": "Fundo",
           "persistentUuid": "d47f2dc5-d4da-43b3-8fef-4c5cd26e5a07",
-          "width": 736,
-          "x": 0,
+          "width": 640,
+          "x": 96,
           "y": 0,
           "zOrder": 4,
           "numberProperties": [],
@@ -4248,14 +4248,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 128,
+          "height": 160,
           "keepRatio": true,
           "layer": "HUD",
           "name": "Ball",
           "persistentUuid": "e0e87248-7ece-4dba-938b-202e7a9087ea",
-          "width": 128,
-          "x": 576,
-          "y": 1120,
+          "width": 160,
+          "x": 544,
+          "y": 992,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
@@ -4263,16 +4263,34 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 62,
+          "height": 208,
           "keepRatio": true,
           "layer": "HUD",
           "name": "TransparentDarkJoystick",
           "persistentUuid": "58dda495-516b-4b7c-b9af-cadb8234cf6e",
-          "width": 0,
-          "x": 96,
-          "y": 1184,
+          "width": 208,
+          "x": 120,
+          "y": 1064,
           "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1280,
+          "keepRatio": true,
+          "layer": "Cenario",
+          "name": "Fundo",
+          "persistentUuid": "bd05f66c-68ad-429e-b950-fb75642e8cfb",
+          "width": 512,
+          "x": -384,
+          "y": 0,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5923,7 +5941,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6052,6 +6069,64 @@
                   ],
                   "actions": [],
                   "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Asteroide",
+                            "RandomInRange(43,587)",
+                            "-10",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceXY"
+                          },
+                          "parameters": [
+                            "Asteroide",
+                            "0",
+                            "RandomFloatInRange(VelocidadeAsteroide/2, VelocidadeAsteroide)",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Asteroide",
+                            "RandomInRange(43,587)",
+                            "-10",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceXY"
+                          },
+                          "parameters": [
+                            "Asteroide",
+                            "0",
+                            "RandomFloatInRange(VelocidadeAsteroide/2, VelocidadeAsteroide)",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
@@ -6464,7 +6539,7 @@
           "isLocked": false,
           "name": "Estrelas",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
