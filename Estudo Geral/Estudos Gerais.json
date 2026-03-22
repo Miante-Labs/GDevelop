@@ -81,6 +81,7 @@
     "authorUsernames": [],
     "categories": [],
     "playableDevices": [
+      "mobile",
       "mobile"
     ],
     "extensionProperties": [],
@@ -155,6 +156,8 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "acceleration": 1200,
           "allowDiagonals": true,
           "angleOffset": 0,
@@ -164,9 +167,7 @@
           "ignoreDefaultControls": false,
           "maxSpeed": 400,
           "movementAngleOffset": 0,
-          "name": "TopDownMovement",
           "rotateObject": false,
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "useLegacyTurnBack": false,
           "viewpoint": "TopDown"
         }
@@ -383,7 +384,7 @@
     {
       "assetStoreId": "",
       "height": 32,
-      "name": "Box",
+      "name": "BoxLimit",
       "persistentUuid": "63de2eff-c4ad-4ac9-b278-bfe7cc51146b",
       "texture": "Assets\\box.png",
       "type": "TiledSpriteObject::TiledSprite",
@@ -391,6 +392,128 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Explosao_H",
+      "persistentUuid": "c84585f7-eb70-4a8d-a3af-bfd43188f3dd",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bombas\\explosao.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Explosao_V",
+      "persistentUuid": "f7e6d309-fbbb-4bc5-9214-dee807ccdc80",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bombas\\explosao.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -400,7 +523,7 @@
         "folderName": "Cenario",
         "children": [
           {
-            "objectName": "Box"
+            "objectName": "BoxLimit"
           }
         ]
       },
@@ -409,6 +532,12 @@
         "children": [
           {
             "objectName": "Explosao"
+          },
+          {
+            "objectName": "Explosao_H"
+          },
+          {
+            "objectName": "Explosao_V"
           },
           {
             "objectName": "Bomba"
@@ -455,23 +584,6 @@
       "instances": [
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Logo",
-          "persistentUuid": "a1619595-82ff-49e1-a762-3109cd929e36",
-          "width": 224,
-          "x": 32,
-          "y": 32,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -493,7 +605,7 @@
           "height": 1088,
           "keepRatio": true,
           "layer": "",
-          "name": "Box",
+          "name": "BoxLimit",
           "persistentUuid": "64b7f4b1-3386-48c7-82af-11eea208ceec",
           "width": 64,
           "x": 1280,
@@ -510,7 +622,7 @@
           "height": 1088,
           "keepRatio": true,
           "layer": "",
-          "name": "Box",
+          "name": "BoxLimit",
           "persistentUuid": "67a82c33-5119-495c-b575-79a949b7c2d6",
           "width": 64,
           "x": -64,
@@ -527,7 +639,7 @@
           "height": 64,
           "keepRatio": true,
           "layer": "",
-          "name": "Box",
+          "name": "BoxLimit",
           "persistentUuid": "7017ce0c-9a59-44ef-a4f0-29def23654ed",
           "width": 1280,
           "x": 0,
@@ -544,7 +656,7 @@
           "height": 64,
           "keepRatio": true,
           "layer": "",
-          "name": "Box",
+          "name": "BoxLimit",
           "persistentUuid": "b9743d20-398a-4085-a8c9-c98ba2afe56c",
           "width": 1280,
           "x": 0,
