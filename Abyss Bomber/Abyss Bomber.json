@@ -81,6 +81,7 @@
     "authorUsernames": [],
     "categories": [],
     "playableDevices": [
+      "mobile",
       "mobile"
     ],
     "extensionProperties": [],
@@ -188,6 +189,94 @@
         "name": "Assets\\Personagem\\idle-4.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Assets/Bomba/bomb-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Bomba\\bomb-2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Bomba/bomb-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Bomba\\bomb-3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Bomba/bomb-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Bomba\\bomb-4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Bomba/bomb-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Bomba\\bomb-5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Bomba/bomb-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Bomba\\bomb-6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Bomba/bomb-7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Bomba\\bomb-7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Bomba/bomb-8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Bomba\\bomb-8.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Bomba/bomb-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Bomba\\bomb-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Porta/close.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Porta\\close.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Porta/open.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Porta\\open.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/powerup/range/range-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\powerup\\range\\range-1.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -211,6 +300,8 @@
           "OffsetY": 0
         },
         {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "acceleration": 400,
           "allowDiagonals": false,
           "angleOffset": 0,
@@ -220,9 +311,7 @@
           "ignoreDefaultControls": false,
           "maxSpeed": 200,
           "movementAngleOffset": 0,
-          "name": "TopDownMovement",
           "rotateObject": false,
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "useLegacyTurnBack": false,
           "viewpoint": "TopDown"
         }
@@ -405,7 +494,13 @@
       "persistentUuid": "a258016c-9a98-41a7-8148-522aa300981d",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "bloqueia_personagem",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -414,12 +509,408 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
+              "looping": true,
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
                   "image": "Assets\\Bomba\\Bomb-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-6.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-7.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-8.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-7.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-6.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Bomba\\bomb-2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -687,6 +1178,182 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Caixa",
+      "persistentUuid": "f4a3dab2-0158-462e-a609-82c1d67ee17c",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "numero",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Fase\\Caixa-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Porta",
+      "persistentUuid": "22fae175-3506-4765-b6fc-f2315352a8c7",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Fechada",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Porta\\close.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Aberta",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Assets\\Porta\\open.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -713,12 +1380,21 @@
         ]
       },
       {
-        "folderName": "Blocos",
+        "folderName": "Cenarios",
         "children": [
+          {
+            "objectName": "Porta"
+          },
+          {
+            "objectName": "Caixa"
+          },
           {
             "objectName": "Parede"
           }
         ]
+      },
+      {
+        "folderName": "PowerUp"
       }
     ]
   },
@@ -767,7 +1443,67 @@
     {
       "name": "player_range",
       "type": "number",
-      "value": 5
+      "value": 1
+    },
+    {
+      "name": "player_max_bomb",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "player_range_temp",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "player_max_bomb_temp",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "player_hp",
+      "type": "number",
+      "value": 3
+    },
+    {
+      "name": "player_life",
+      "type": "number",
+      "value": 3
+    },
+    {
+      "name": "player_score",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "obj_door",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "obj_powerup",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "obj_powerup_type",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "encontrou_saida",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "encontrou_objeto",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "caixas",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -793,7 +1529,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.5,
         "snap": true,
-        "zoomFactor": 0.9532534283328532,
+        "zoomFactor": 1.2848010833809451,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -1596,42 +2332,10 @@
           "keepRatio": true,
           "layer": "",
           "name": "Caixa",
-          "persistentUuid": "62600ed9-2f0f-4172-9541-ee9682ee6a60",
-          "width": 0,
-          "x": 64,
-          "y": 64,
-          "zOrder": 1000000,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Caixa",
-          "persistentUuid": "e993383d-8e12-4c5e-9a17-6d60d639c946",
-          "width": 0,
-          "x": 96,
-          "y": 64,
-          "zOrder": 1000001,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Caixa",
           "persistentUuid": "e32e691c-64fb-411d-84d2-7368de63d738",
           "width": 0,
-          "x": 128,
-          "y": 64,
+          "x": 96,
+          "y": 32,
           "zOrder": 1000002,
           "numberProperties": [],
           "stringProperties": [],
@@ -1646,73 +2350,9 @@
           "name": "Caixa",
           "persistentUuid": "986986d0-17bb-4078-8cf2-36c64fda8f52",
           "width": 0,
-          "x": 96,
-          "y": 96,
+          "x": 128,
+          "y": 64,
           "zOrder": 1000003,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Caixa",
-          "persistentUuid": "f21940da-fca8-468b-ba6b-de55e9977f99",
-          "width": 0,
-          "x": 96,
-          "y": 128,
-          "zOrder": 1000004,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Caixa",
-          "persistentUuid": "7c8b234f-f7a3-44d1-90d1-e3bf08a8cf6e",
-          "width": 0,
-          "x": 96,
-          "y": 160,
-          "zOrder": 1000005,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Caixa",
-          "persistentUuid": "71c4baaf-535c-46da-8fed-22923d024f24",
-          "width": 0,
-          "x": 96,
-          "y": 192,
-          "zOrder": 1000006,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Caixa",
-          "persistentUuid": "cf9bcefa-42e4-49e5-ab89-d22db254fb41",
-          "width": 0,
-          "x": 64,
-          "y": 192,
-          "zOrder": 1000007,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1730,6 +2370,198 @@
           "x": 32,
           "y": 64,
           "zOrder": 1000008,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Teste",
+          "persistentUuid": "f0d012b7-e365-4078-9c58-4e45ddf030be",
+          "width": 0,
+          "x": 544,
+          "y": 320,
+          "zOrder": 1000009,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "10a0cf37-ca40-4f6a-bcb2-5c1c562fef02",
+          "width": 0,
+          "x": 96,
+          "y": 96,
+          "zOrder": 1000002,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "cd5e4f89-19fb-4e3b-b6b4-9bdc334d7f44",
+          "width": 0,
+          "x": 96,
+          "y": 160,
+          "zOrder": 1000003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "b880bc8c-2140-41af-bff8-bf48904d34b0",
+          "width": 0,
+          "x": 96,
+          "y": 224,
+          "zOrder": 1000003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "2362f7a9-5966-409f-bd9c-209caa2a2ee6",
+          "width": 0,
+          "x": 96,
+          "y": 288,
+          "zOrder": 1000003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "ffb0d144-f710-4e09-858b-55e79bd80109",
+          "width": 0,
+          "x": 160,
+          "y": 288,
+          "zOrder": 1000003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "1589a4dd-8ae6-4b0f-a476-43182411fde5",
+          "width": 0,
+          "x": 160,
+          "y": 256,
+          "zOrder": 1000003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "3dddb61c-c55a-4107-8ce3-56e793c0652f",
+          "width": 0,
+          "x": 160,
+          "y": 32,
+          "zOrder": 1000003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "d819f718-bd48-4b69-9db4-759df6a02557",
+          "width": 0,
+          "x": 160,
+          "y": 96,
+          "zOrder": 1000003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "cf278ab8-14c5-499d-810a-368b59d749c8",
+          "width": 0,
+          "x": 224,
+          "y": 32,
+          "zOrder": 1000003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "7bef132c-2e17-4114-a9a7-6cfd0b634828",
+          "width": 0,
+          "x": 256,
+          "y": 64,
+          "zOrder": 1000003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Caixa",
+          "persistentUuid": "a89b3853-0d6f-4042-b6e2-7ded37f21013",
+          "width": 0,
+          "x": 224,
+          "y": 96,
+          "zOrder": 1000003,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1783,8 +2615,8 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "Caixa",
-          "persistentUuid": "f4a3dab2-0158-462e-a609-82c1d67ee17c",
+          "name": "PowerUP_Range",
+          "persistentUuid": "8698f8b1-9529-4bb3-bed3-2d3b78cfbb62",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -1801,7 +2633,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Assets\\Fase\\Caixa-1.png",
+                      "image": "Assets\\powerup\\range\\range-1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1849,7 +2681,7 @@
             "objectName": "Teste"
           },
           {
-            "objectName": "Caixa"
+            "objectName": "PowerUP_Range"
           }
         ]
       },
@@ -1872,6 +2704,13 @@
             "includeConfig": 0
           },
           "target": "Personagem"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Objetos"
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -1945,6 +2784,43 @@
                 "384",
                 "\"TileSet\"",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Instancia Variáveis de Objetos"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneJustBegins"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "obj_powerup_type",
+                "=",
+                "1"
               ]
             }
           ]
@@ -2126,6 +3002,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Sistema Geral",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2158,6 +3035,51 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Personagem",
+                    "Bomba",
+                    "",
+                    "",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Bomba",
+                    "bloqueia_personagem",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "Personagem",
+                    "Bomba",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             },
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -2193,6 +3115,192 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "name": "Objetos",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Inicialização de Varíaveis de Objetos"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "obj_powerup",
+                    "=",
+                    "RandomInRange(1, SceneInstancesCount(Caixa))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "obj_door",
+                    "=",
+                    "RandomInRange(1, SceneInstancesCount(Caixa))"
+                  ]
+                }
+              ]
+            },
+            {
+              "infiniteLoopWarning": true,
+              "type": "BuiltinCommonInstructions::While",
+              "whileConditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "obj_door",
+                    "=",
+                    "obj_powerup"
+                  ]
+                }
+              ],
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "obj_powerup",
+                    "=",
+                    "RandomInRange(1, SceneInstancesCount(Caixa))"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Pegando PowerUP"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Personagem",
+                    "PowerUP_Range",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "player_range",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "player_range_temp",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "PowerUP_Range",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Caixa",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "caixas",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Caixa",
+                    "numero",
+                    "=",
+                    "caixas"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
           "name": "Controle",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2309,6 +3417,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Bomba",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2361,6 +3470,17 @@
                 },
                 {
                   "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetSize"
+                  },
+                  "parameters": [
+                    "Bomba",
+                    "Resizable",
+                    "32",
+                    "32"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "SetZOrder"
                   },
                   "parameters": [
@@ -2376,6 +3496,44 @@
                   "parameters": [
                     "Bomba",
                     "\"Bomba\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Bomba",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Personagem",
+                        "Bomba",
+                        "32",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Bomba",
+                        "bloqueia_personagem",
+                        "True",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -3107,20 +4265,322 @@
                   ]
                 }
               ],
-              "actions": [
+              "actions": [],
+              "events": [
                 {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Caixa",
-                    ""
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Caixa",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Verifica se a porta abriu"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "obj_door",
+                            ">=",
+                            "Caixa.numero - 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "obj_door",
+                            "<=",
+                            "Caixa.numero + 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "encontrou_saida",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Porta",
+                            "Caixa.X()",
+                            "Caixa.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetZOrder"
+                          },
+                          "parameters": [
+                            "Porta",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "encontrou_saida",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Verifica se Tem PowerUP"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "obj_powerup",
+                            ">=",
+                            "Caixa.numero - 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "obj_powerup",
+                            "<=",
+                            "Caixa.numero + 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "encontrou_objeto",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "obj_powerup_type",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "PowerUP_Range",
+                                "Caixa.X()",
+                                "Caixa.Y()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResizableCapability::ResizableBehavior::SetSize"
+                              },
+                              "parameters": [
+                                "PowerUP_Range",
+                                "Resizable",
+                                "30",
+                                "30"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetZOrder"
+                              },
+                              "parameters": [
+                                "PowerUP_Range",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "obj_powerup_type",
+                                "=",
+                                "2"
+                              ]
+                            }
+                          ],
+                          "actions": []
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "obj_powerup_type",
+                                "=",
+                                "3"
+                              ]
+                            }
+                          ],
+                          "actions": []
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "encontrou_objeto",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "orderBy": "Caixa.numero",
+                  "order": "asc"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Caixa",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
             }
           ],
           "parameters": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Cena sem título",
+      "name": "Objetos",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Verifica se a porta abriu"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "obj_door",
+                "=",
+                "SceneInstancesCount(Caixa)"
+              ]
+            }
+          ],
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -3146,7 +4606,7 @@
                 "Teste",
                 "Text",
                 "=",
-                "ToString(Exposao_Midle.ObjectTimerElapsedTime(\"Explosao\"))"
+                "obj_powerup + \" | \" + obj_door + \" | \" + caixas"
               ]
             }
           ]
