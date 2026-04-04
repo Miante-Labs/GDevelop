@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 262,
+    "build": 261,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -275,6 +275,38 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\powerup\\range\\range-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Personagem/Novo/idle-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Personagem\\Novo\\idle-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Personagem/Novo/idle-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Personagem\\Novo\\idle-2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Personagem/Novo/idle-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Personagem\\Novo\\idle-3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Personagem/Novo/idle-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Personagem\\Novo\\idle-4.png",
         "smoothed": false,
         "userAdded": false
       }
@@ -1529,7 +1561,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.5,
         "snap": true,
-        "zoomFactor": 1.2848010833809451,
+        "zoomFactor": 2.184161841747605,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -2359,23 +2391,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Personagem",
-          "persistentUuid": "efe696b2-1a98-4f01-bd02-05d83589e1d0",
-          "width": 32,
-          "x": 32,
-          "y": 64,
-          "zOrder": 1000008,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -2562,6 +2577,23 @@
           "x": 224,
           "y": 96,
           "zOrder": 1000003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Personagem",
+          "persistentUuid": "b3ee16d1-78db-45b5-b77b-98e058186066",
+          "width": 32,
+          "x": 32,
+          "y": 64,
+          "zOrder": 1000010,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5240,20 +5272,6 @@
           "objectGroups": []
         }
       ],
-      "eventsFunctionsFolderStructure": {
-        "folderName": "__ROOT",
-        "children": [
-          {
-            "functionName": "SpeedToReach"
-          },
-          {
-            "functionName": "BrakingDistance"
-          },
-          {
-            "functionName": "DefineJavaScriptForTopDown"
-          }
-        ]
-      },
       "eventsBasedBehaviors": [
         {
           "description": "Seamlessly align big pixels using a top-down movement.",
@@ -5354,17 +5372,6 @@
               "objectGroups": []
             }
           ],
-          "eventsFunctionsFolderStructure": {
-            "folderName": "__ROOT",
-            "children": [
-              {
-                "functionName": "onCreated"
-              },
-              {
-                "functionName": "doStepPostEvents"
-              }
-            ]
-          },
           "propertyDescriptors": [
             {
               "value": "",
@@ -6434,17 +6441,6 @@
               "objectGroups": []
             }
           ],
-          "eventsFunctionsFolderStructure": {
-            "folderName": "__ROOT",
-            "children": [
-              {
-                "functionName": "doStepPreEvents"
-              },
-              {
-                "functionName": "doStepPostEvents"
-              }
-            ]
-          },
           "propertyDescriptors": [
             {
               "value": "",
