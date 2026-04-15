@@ -1,0 +1,14 @@
+{ "columns":21,
+ "image":"imagem_tileset.png",
+ "imageheight":512,
+ "imagewidth":1344,
+ "margin":0,
+ "name":"Tiles_ilha",
+ "spacing":0,
+ "tilecount":168,
+ "tiledversion":"1.11.1",
+ "tileheight":64,
+ "tilewidth":64,
+ "type":"tileset",
+ "version":"1.10"
+}
